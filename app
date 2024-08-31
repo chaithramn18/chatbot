@@ -1,8 +1,3 @@
-You can deploy your own version of the Next.js AI Chatbot to Vercel with one click:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?demo-title=Next.js+Chat&demo-description=A+full-featured%2C+hackable+Next.js+AI+chatbot+built+by+Vercel+Labs&demo-url=https%3A%2F%2Fchat.vercel.ai%2F&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F4aVPvWuTmBvzM5cEdRdqeW%2F4234f9baf160f68ffb385a43c3527645%2FCleanShot_2023-06-16_at_17.09.21.png&project-name=Next.js+Chat&repository-name=nextjs-chat&repository-url=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fai-chatbot&from=templates&skippable-integrations=1&env=OPENAI_API_KEY%2CAUTH_SECRET&envDescription=How+to+get+these+env+vars&envLink=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fai-chatbot%2Fblob%2Fmain%2F.env.example&teamCreateStatus=hidden&stores=[{"type":"kv"},{"type":"postgres"}])
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?demo-title=Next.js+Chat&demo-description=A+full-featured%2C+hackable+Next.js+AI+chatbot+built+by+Vercel+Labs&demo-url=https%3A%2F%2Fchat.vercel.ai%2F&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F4aVPvWuTmBvzM5cEdRdqeW%2F4234f9baf160f68ffb385a43c3527645%2FCleanShot_2023-06-16_at_17.09.21.png&project-name=Next.js+Chat&repository-name=nextjs-chat&repository-url=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fai-chatbot&from=templates&skippable-integrations=1&env=OPENAI_API_KEY%2CAUTH_SECRET&envDescription=How+to+get+these+env+vars&envLink=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fai-chatbot%2Fblob%2Fmain%2F.env.example&teamCreateStatus=hidden&stores=[{"type":"kv"}])
-
 ## Creating a KV Database Instance
 
 @@ -57,7 +57,6 @@ You will need to use the environment variables [defined in `.env.example`](.env.
@@ -19,13 +14,13 @@ Original file line number	Diff line number	Diff line change
 @@ -1,14 +1,26 @@
 'use server'
 
-import { signIn } from '@/auth'
+import { signIn } 
 import { AuthResult } from '@/lib/types'
-import { User } from '@/lib/types'
-import { AuthError } from 'next-auth'
-import { z } from 'zod'
-import { kv } from '@vercel/kv'
-import { ResultCode } from '@/lib/utils'
+import { User } f
+import { AuthError } 
+import { z } 
+import { kv } 
+import { ResultCode } 
 
 export async function getUser(email: string) {
   const user = await kv.hgetall<User>(`user:${email}`)
@@ -378,14 +373,4 @@ export const getMessageFromCode = (resultCode: string) => {
       return 'Logged in!'
   }
 }
-  1 change: 0 additions & 1 deletion1  
-package.json
-Original file line number	Diff line number	Diff line change
-@@ -26,7 +26,6 @@
-    "@vercel/analytics": "^1.1.2",
-    "@vercel/kv": "^1.0.1",
-    "@vercel/og": "^0.6.2",
-    "@vercel/postgres": "^0.7.2",
-    "ai": "^3.0.12",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.0",
+
