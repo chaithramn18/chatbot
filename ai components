@@ -1,8 +1,3 @@
-components/stocks/stock.tsx
-Original file line number	Diff line number	Diff line change
-@@ -1,9 +1,7 @@
-'use client'
-
 import { useState, useRef, useEffect, useId } from 'react'
 import { scaleLinear } from 'd3-scale'
 import { subMonths, format } from 'date-fns'
